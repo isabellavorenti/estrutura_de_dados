@@ -1,0 +1,16 @@
+package estrutura_de_dados;
+
+public class View_Recursividade_2 {
+
+	public static void main(String[] args) 
+	{
+		Recursividade_2 funcao = new Recursividade_2();
+
+		int vetor [] = {1, 4, 2, -3, 9, 7, 15};
+		int tamanho = vetor.length;
+		int valor = funcao.Verifica(vetor, 0, tamanho, 15);
+		System.out.println(valor);
+		
+	}
+
+}
