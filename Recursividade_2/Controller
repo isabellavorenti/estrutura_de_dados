@@ -1,0 +1,25 @@
+package estrutura_de_dados;
+
+public class Recursividade_2
+{
+	public Recursividade_2 ()
+	{
+		super();
+	}
+	
+	public int Verifica (int [] vetor, int i, int tamanho, int menor)
+	{
+		if (i == tamanho) 
+		{
+			return menor;
+		}
+		
+		else if (menor > vetor[i])
+		{
+			menor = vetor[i];
+		}
+		
+		return Verifica(vetor, i + 1, tamanho, menor);
+	}
+	
+}
