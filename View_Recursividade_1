@@ -1,0 +1,17 @@
+package estrutura_de_dados;
+
+import javax.swing.JOptionPane;
+
+public class View_Recursividade_1 {
+
+	public static void main(String[] args) 
+	{
+		Recursividade_1 funcao = new Recursividade_1();
+		
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número natural:"));
+		int resultado = funcao.soma(num);
+		System.out.println(resultado);
+		
+	}
+
+}
