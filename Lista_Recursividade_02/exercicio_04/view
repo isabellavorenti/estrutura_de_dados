@@ -1,0 +1,25 @@
+package Lista_Recursiva_2;
+
+import java.util.Scanner;
+
+public class view_recursiva_04 {
+
+	public static void main(String[] args) 
+	{
+		int n = 2;
+		Scanner ler = new Scanner (System.in);
+		controller_recursiva_04 funcao = new controller_recursiva_04();
+		
+		while(n % 2 == 0)
+		{
+			System.out.println("Digite um número positivo ímpar: ");
+			n = ler.nextInt();
+		}
+		
+		int total = funcao.FatorialDuplo(n, 1);
+		
+		System.out.println("Resultado do fatorial duplo de " + n + " = " + total);
+
+	}
+
+}
