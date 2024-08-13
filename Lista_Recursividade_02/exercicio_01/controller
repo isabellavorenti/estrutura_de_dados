@@ -1,0 +1,23 @@
+package Lista_Recursiva_2;
+
+public class controller_recursiva_01 
+{
+	public controller_recursiva_01 () 
+	{
+		super();
+	}
+	
+	public int Recursiva(int a, int b, int cta, int total)
+	{
+		if (cta > b) 
+		{
+			return total;
+		}
+		
+		else 
+		{
+			total = (total + a);
+			return Recursiva(a, b, cta + 1, total);
+		}
+	}
+}
