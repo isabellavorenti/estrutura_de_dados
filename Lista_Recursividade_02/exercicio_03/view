@@ -1,0 +1,19 @@
+package Lista_Recursiva_2;
+
+public class view_recursiva_03 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		controller_recursiva_03 funcao = new controller_recursiva_03();
+		
+		int vetor [] = {2, 5, 87, 4, 90, 42, 3, 7, 2};
+		int tamanho = vetor.length;
+		int quantidade = funcao.Pares(vetor, tamanho, 0, 0);
+		
+		System.out.println("Quantidade de números pares presentes no vetor: " + quantidade);
+
+	}
+
+}
