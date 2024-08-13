@@ -1,0 +1,23 @@
+package Lista_Recursiva_2;
+
+public class controller_recursiva_02
+{
+	public controller_recursiva_02 () 
+	{
+		super();
+	}
+	
+	public int Recursiva (int divisor, int dividendo)
+	{
+		if (dividendo < divisor) 
+		{
+			return dividendo;
+		}
+		
+		else
+		{
+			return Recursiva(divisor, dividendo - divisor);
+		}
+		
+	}
+}
