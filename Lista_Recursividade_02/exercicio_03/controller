@@ -1,0 +1,24 @@
+package Lista_Recursiva_2;
+
+public class controller_recursiva_03 
+{
+	public controller_recursiva_03 ()
+	{
+		super();
+	}
+	
+	public int Pares (int[] vetor, int tamanho, int cta, int total)
+	{
+		if (cta == tamanho) 
+		{
+			return total;
+		}
+		
+		else if (vetor[cta] % 2 == 0)
+		{
+			total += 1;
+		}
+		
+		return Pares(vetor, tamanho, cta + 1, total);
+	}
+}
