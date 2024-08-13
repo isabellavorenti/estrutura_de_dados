@@ -1,0 +1,23 @@
+package Lista_Recursiva_2;
+
+public class controller_recursiva_04
+{
+	public controller_recursiva_04 ()
+	{
+		super();
+	}
+	
+	public int FatorialDuplo (int n, int total)
+	{
+		if (n < 0) 
+		{
+			return total;
+		}
+		
+		else 
+		{
+			total = (total * n);
+			return FatorialDuplo(n - 2, total);
+		}
+	}
+}
