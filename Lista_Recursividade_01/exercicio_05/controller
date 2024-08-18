@@ -1,0 +1,27 @@
+package estrutura_de_dados;
+
+public class Recursividade_5 
+{
+	public Recursividade_5 ()
+	{
+		super();
+	}
+	
+	public double Somatoria (int n, double total)
+	{
+		//A somatória terminará assim que n for 0 e retornará o valor total.
+		if(n < 1)
+		{
+			return total;
+		}
+		
+		//O total recebe total mais o resultado da divisão.
+		else
+		{
+			total = (total + (1 / (double) n));
+		}
+		
+		//Retorno de n - 1, para realizar a conta decrescentemente.
+		return Somatoria(n - 1, total);
+	}
+}
