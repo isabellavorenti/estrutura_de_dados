@@ -1,0 +1,26 @@
+package controller;
+
+public class Controller_Lista_02_Exercicio_05 
+{
+	
+	public Controller_Lista_02_Exercicio_05()
+	{
+		super();
+	}
+	
+	public int CalculaMDC(int a, int b)
+	{
+		if (b==0) 
+		{
+			return a;
+		}
+		else
+		{
+			int aux = b;
+			b = a % b;
+			a = aux;
+			return CalculaMDC(a, b);
+		}
+	}
+
+}
