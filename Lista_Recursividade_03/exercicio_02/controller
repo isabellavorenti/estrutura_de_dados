@@ -1,0 +1,43 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_02 
+{
+	
+	public Controller_Lista_03_Exercicio_02()
+	{
+		super();
+	}
+	
+	public int Contabilizador(int valor, int n, int resto, int cta)
+	{
+		/*
+		 * Condição de parada: quando a divisão de "valor" por 10 resultar em 0, 
+		 * deve ser retornado o valor acumulado em "cta". Pois significa que não é possível 
+		 * mais efetuar divisões e o último resto já foi analisado. 
+		 */
+		
+		if (valor == 0) 
+		{
+			return cta;
+		}
+		
+		/*
+		 * A variável "resto" recebe o resto da divisão entre "valor" e 10, podendo-se 
+		 * analisar se ela é compatível com "n", ou seja, o 2° número utilizado.
+		 * Abaixo, têm-se a divisão para checar a condição de parada.
+		 */
+		
+		else 
+		{
+			resto = valor % 10;
+			valor /= 10;
+			
+			if (resto == n) 
+			{
+				cta +=1;
+			}
+		}
+		
+		return Contabilizador(valor, n, resto, cta);
+	}
+}
