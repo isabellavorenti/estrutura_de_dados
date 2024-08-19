@@ -1,0 +1,37 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_05 
+{
+	
+	public Controller_Lista_03_Exercicio_05()
+	{
+		super();
+	}
+	
+	public String Fibonacci(int num, String serie, int cta, int s1, int s2)
+	{
+		/*
+		 * Condição de parada: quando cta for maior que o número digitado pelo usuário, 
+		 * pois significa que já realizou os retornos necessários.
+		 */
+		if (cta > num) 
+		{
+			return serie;
+		}
+		
+		/*
+		 * De acordo com a regra, inicia-se a somatória por 0 e 1, resultado em 1 que soma com o 
+		 * valor anterior, 1. Então, atribui à s1 o valor de s2 e à s2 o valor de soma.
+		 * Visto isso, considerei que uma String cumpriria bem o trabalho de deixar os valores
+		 * em sequência, assim como no binário.
+		 */
+		
+		else
+		{
+			int soma = s1 + s2;
+			serie = serie + " " + String.valueOf(soma);
+			return Fibonacci(num, serie, cta + 1, s1 = s2, s2 = soma);
+		}
+	}
+	
+}
