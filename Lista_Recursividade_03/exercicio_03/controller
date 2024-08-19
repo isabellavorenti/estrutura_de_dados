@@ -1,0 +1,29 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_03 
+{
+	
+	public Controller_Lista_03_Exercicio_03()
+	{
+		super();
+	}
+	
+	public String Inversao(String palavra, int length)
+	{
+		/*
+		 * Condição de parada: quando não houver mais string (" "), a função retornará a palavra completa.
+		 */
+		if (palavra.isEmpty()) 
+		{
+			return palavra;
+		}
+		
+		/*
+		 * Retorno da última letra somado com a função recursiva que subtrai 1 de length
+		 * (tamanho da String) e retorna length até zerar.
+		 */
+		
+		return palavra.substring(length) + Inversao(palavra.substring(0, length), length - 1);
+
+	}
+}
