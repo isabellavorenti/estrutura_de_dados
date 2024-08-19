@@ -1,0 +1,25 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_07;
+
+public class View_Lista_03_Exercicio_07 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Controller_Lista_03_Exercicio_07 op = new Controller_Lista_03_Exercicio_07();
+		Scanner ler = new Scanner (System.in);
+		
+		System.out.println("Digite um valor inteiro: ");
+		int num = ler.nextInt();
+		
+		int soma = op.Soma(num, 0);
+		
+    System.out.println("Resultado da soma dos dígitos: " + soma);
+		
+	}
+
+}
