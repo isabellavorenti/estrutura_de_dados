@@ -1,0 +1,29 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_05;
+
+public class View_Lista_03_Exercicio_05 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner ler = new Scanner (System.in);
+		Controller_Lista_03_Exercicio_05 op = new Controller_Lista_03_Exercicio_05();
+		
+		int n = 21;
+		
+		while (n > 20)
+		{
+			System.out.println("Digite um valor até 20 para a série: ");
+			n = ler.nextInt();
+		}
+		
+		String fib = op.Fibonacci(n, "1", 2, 0, 1);
+		
+		System.out.println("Sequência = " + fib);
+
+	}
+
+}
