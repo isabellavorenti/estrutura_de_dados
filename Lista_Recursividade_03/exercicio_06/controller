@@ -1,0 +1,55 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_06 
+{
+	
+	public Controller_Lista_03_Exercicio_06()
+	{
+		super();
+	}
+	
+	public double Somatoria (int n, double fat, double cta, double soma)
+	{
+		/*
+		 * Condição de parada: quis fazer de trás para frente, então quando "n" for 1, soma será
+		 * retornada.
+		 */
+		
+		if (n == 1) 
+		{
+			return soma;
+		}
+		
+		/*
+		 * Abaixo, se trata mais especificamente do fatorial. Então, quando o cta for 1
+		 * significa que a multiplicação já foi finalizada (ex. 3*2*1), daí encaminha
+		 * diretamente pra divisão com 1 e na sequência soma com o acumulador.
+		 * 
+		 * No return, somatória retorna n - 1 pois já finalizou uma fração, e fat = 1 para
+		 * inicializar novamente a variável. Assim como no cta, que começa com n - 1, 
+		 * para acompanhar no próximo fatorial.
+		 */
+		
+		else
+		{
+			if (cta == 1) 
+			{
+				fat *= cta;
+				double div = (1 / fat);
+				soma = (div + soma);
+				return Somatoria(n - 1, fat = 1, cta = n - 1, soma);
+			}
+			
+			/* 
+			 * No else, enquanto fat não fosse 1, somatoria retornaria cta - 1, justamente para
+			 * a multiplicação.
+			 */
+			else 
+			{
+				fat *= cta;
+				return Somatoria(n, fat, cta - 1, soma);
+			}
+      
+		}
+	}
+}
