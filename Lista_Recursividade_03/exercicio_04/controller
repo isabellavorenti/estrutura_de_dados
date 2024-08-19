@@ -1,0 +1,38 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_04 
+{
+	
+	public Controller_Lista_03_Exercicio_04 ()
+	{
+		super();
+	}
+	
+	public String Binario(int valor, String bin, int resto)
+	{
+		/*
+		 * Quando a última divisão entre valor e 2 resultar em 0, haverá a parada e o retorno do 
+		 * número binário.
+		 */
+		
+		if (valor == 0)
+		{
+			return bin;
+		}
+		
+		/* 
+		 * O resto será convertido para binário, como pedido na tarefa, e ficará em ordem inversa no 
+		 * final. A String "bin" recebe o total e acumulará as strings em
+		 * sequência por meio da soma. "bin" fica no final por conta da inversão.
+		 * No final, ocorre o retorno e nele, a divisão contínua do valor por 2.
+		 */
+		
+		else 
+		{
+			resto = (valor % 2);
+			String total = String.valueOf(resto);
+			bin = (total + bin);
+			return Binario(valor/2, bin, resto);
+		}
+	}
+}
