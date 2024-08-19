@@ -1,0 +1,24 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_06;
+
+public class View_Lista_03_Exercicio_06 
+{
+
+	public static void main(String[] args)
+	{
+		
+		Controller_Lista_03_Exercicio_06 op = new Controller_Lista_03_Exercicio_06();
+		Scanner ler = new Scanner (System.in);
+		
+		System.out.println("Digite um número inteiro para a somatória: ");
+		int n = ler.nextInt();
+		
+		double soma = op.Somatoria(n, 1, n, 1);
+		
+		System.out.println("Resultado da somatória = " + soma);
+	}
+
+}
