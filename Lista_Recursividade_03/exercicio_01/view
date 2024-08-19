@@ -1,0 +1,26 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_01;
+
+public class View_Lista_03_Exercicio_01 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Controller_Lista_03_Exercicio_01 op = new Controller_Lista_03_Exercicio_01();
+		
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite um valor: ");
+		int valor = ler.nextInt();
+		
+		int n = op.CalculaDigitos(valor, 0);
+		
+		System.out.println("Número de dígitos no valor " + valor + " = " + n);
+		
+	}
+
+}
