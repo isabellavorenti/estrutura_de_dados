@@ -1,0 +1,37 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_07 
+{
+	
+	public Controller_Lista_03_Exercicio_07()
+	{
+		super();
+	}
+	
+	public int Soma (int valor, int soma)
+	{
+		/*
+		 * Condição de parada: quando o resultado da divisão entre "valor" e 10 resultar
+		 * em 0, haverá o retorno da "soma".
+		 */
+		
+		if (valor == 0) 
+		{
+			return soma;
+		}
+		
+		/*
+		 * A variável recebe o resto de "valor" dividido por 10 e soma com o 
+		 * acumulador que inicia com zero.
+		 * No final, retorna a divisão de "valor" por 10. 
+		 */
+		
+		else
+		{
+			int resto = valor % 10;
+			soma += resto;
+			return Soma(valor/10, soma);
+		}
+    
+	}
+}
