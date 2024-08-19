@@ -1,0 +1,27 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_03;
+
+public class View_Lista_03_Exercicio_03 
+{
+
+	public static void main(String[] args)
+	{
+		
+		Scanner ler = new Scanner(System.in);
+		Controller_Lista_03_Exercicio_03 op = new Controller_Lista_03_Exercicio_03();
+		
+		System.out.println("Digite uma palavra: ");
+		String palavra = ler.next();
+		
+		int length = palavra.length();
+		
+		palavra = op.Inversao(palavra, length);
+		
+		System.out.println("Palavra invertida = " + palavra);
+		
+	}
+
+}
