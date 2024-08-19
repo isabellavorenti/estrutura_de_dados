@@ -1,0 +1,30 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_04;
+
+public class View_Lista_03_Exercicio_04 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Controller_Lista_03_Exercicio_04 op = new Controller_Lista_03_Exercicio_04();
+		Scanner ler = new Scanner (System.in);
+		
+		int n = 2001;
+		
+		while (n > 2000)
+		{
+			System.out.println("Digite um número até 2000: ");
+			n = ler.nextInt();
+		}
+		
+		String binario = op.Binario(n, "", 0);
+		
+		System.out.println("Número = " + n + "\nConversão para binário = " + binario);
+		
+	}
+
+}
