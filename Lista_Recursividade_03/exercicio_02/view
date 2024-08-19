@@ -1,0 +1,36 @@
+package view;
+
+import java.util.Scanner;
+
+import controller.Controller_Lista_03_Exercicio_02;
+
+public class View_Lista_03_Exercicio_02 
+{
+	
+	public static void main(String[] args) 
+	{
+		
+		Controller_Lista_03_Exercicio_02 op = new Controller_Lista_03_Exercicio_02();
+		
+		Scanner ler = new Scanner (System.in);
+		
+		int n = 10;
+		int valor = 0;
+		
+		while (valor < 10 || valor > 999999 && n < 0 || n > 9)
+		{
+			System.out.println("Digite um número inteiro de 10 a 999999: ");
+			valor = ler.nextInt();
+			
+			System.out.println("Digite um 2° número inteiro de 0 a 9: ");
+			n = ler.nextInt();
+		}
+		
+		int vezes = op.Contabilizador(valor, n, 0, 0);
+		
+		System.out.println("1° Número = " + valor + "\n2° número = " + n + "\nRetorno aparece " + 
+							vezes + " vezes.");
+		
+	}
+
+}
