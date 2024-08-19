@@ -1,0 +1,33 @@
+package controller;
+
+public class Controller_Lista_03_Exercicio_01 
+{
+	
+	public Controller_Lista_03_Exercicio_01() 
+	{
+		super();
+	}
+	
+	public int CalculaDigitos(int valor, int ndigitos) 
+	{
+		/*
+		 * A condição de parada é quando o valor dividido por 10 resultar em 0. Pois significa que o
+		 * valor restante era menor do que o próprio 10, sendo então formado por apenas um dígito.
+		 */
+		if (valor/10 == 0) 
+		{
+			return ndigitos + 1;
+		}
+		
+		/*
+		 * Neste caso, a cada vez que dividirmos o valor restante por 10, um dígito será retirado.
+		 * Por isso soma-se 1 ao ndigitos e, dessa forma, pode-se contabilizar 
+		 * todas as vezes que isso ocorre.
+		 */
+		else
+		{
+			valor /= 10;
+			return CalculaDigitos(valor, ndigitos + 1);
+		}
+	}
+}
